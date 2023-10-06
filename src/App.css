@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+body{
+  background-color: rgb(33,37,41);
+  color:white
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-item{
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.background{
+  display:flex;
+  align-items: center;
+  width: 100%;
+  height: 800px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ::before : 가상선택자 - 존재하지 않은 요소를 존재하는 요소처럼 보여지게 하는 선택자 */
+.background::before{
+  position: absolute;
+  left:0;
+  width: 100%;
+  height: 800px;
+  content: '';
+  background: linear-gradient(to left, black, transparent);
+}
+
+.title{
+  font-size: 40px;
+  margin-left: 40px;
+}
+
+.MovieCard_title{
+  font-size: 30px;
+}
+
+/* .MovieCard > a{
+  color: white;
+  text-decoration: none;
+} */
+
+/* .MovieCard_Container > * {
+  padding-bottom: 20px;
+} */
+
+.MovieCard_Container{
+  width: 300px;
+  height: 200px;
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-details{
+  display: flex;
+  padding: 50px;
+  gap:50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-details .poster > img{
+  width:500px;
+}
+
+.movie-details .genre{
+  display: flex;
+  gap: 20px;
+}
+
+.movie-details .genre + h1{
+  font-size: 2em;
+  margin:20px 0;
+}
+
+.movie-details h4 + div{
+  display: flex;
+  gap: 15px;
+  border-bottom: 3px solid white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.movie-details .overview{
+  border-bottom: 3px solid white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Review */
+.review-box{
+  border: 3px solid white;
+  padding: 30px;
+}
+
+.review-item{
+  border-bottom: 3px solid white;
+  margin-bottom: 15px;
+}
+
+/* Movies */
+
+
+.movie-card-list{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
